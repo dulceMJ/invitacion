@@ -2,146 +2,251 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Marcellus&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{
-  width:1200px;height:630px;overflow:hidden;
-  background:radial-gradient(ellipse at 30% 40%, #2d1550 0%, #1a0f2e 50%, #0d0820 100%);
-  font-family:'Georgia',serif;
-  display:flex;align-items:center;justify-content:center;
+  width:1200px;
+  height:630px;
+  overflow:hidden;
+  background:radial-gradient(circle at center, #2a1a44 0%, #12081f 70%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
   position:relative;
 }
 
-/* estrellas decorativas */
-.stars{position:absolute;inset:0;overflow:hidden;}
-.star{position:absolute;background:white;border-radius:50%;animation:twinkle 3s infinite;}
-@keyframes twinkle{0%,100%{opacity:.2;}50%{opacity:1;}}
+/* ESTRELLAS */
+.stars{position:absolute;inset:0;pointer-events:none;}
+.star{
+  position:absolute;
+  background:white;
+  border-radius:50%;
+  animation:twinkle 3s infinite ease-in-out;
+}
+@keyframes twinkle{0%,100%{opacity:.15;}50%{opacity:.9;}}
 
-.card{
-  text-align:center;
-  color:#f7f0ff;
+/* MARIPOSAS ESQUINAS */
+.butterfly{position:absolute;opacity:.55;}
+
+/* DESTELLOS */
+.sparkle{position:absolute;color:#e8c87a;opacity:.5;font-size:18px;}
+
+/* BORDE DECORATIVO */
+.border-frame{
+  position:absolute;
+  inset:30px;
+  border:1px solid rgba(232,200,122,.18);
+  border-radius:4px;
+  pointer-events:none;
+}
+.border-frame::before{content:'';position:absolute;top:-2px;left:-2px;width:55px;height:55px;border-top:2px solid rgba(232,200,122,.7);border-left:2px solid rgba(232,200,122,.7);}
+.border-frame::after{content:'';position:absolute;bottom:-2px;right:-2px;width:55px;height:55px;border-bottom:2px solid rgba(232,200,122,.7);border-right:2px solid rgba(232,200,122,.7);}
+.corner-tr{position:absolute;top:-2px;right:-2px;width:55px;height:55px;border-top:2px solid rgba(232,200,122,.7);border-right:2px solid rgba(232,200,122,.7);}
+.corner-bl{position:absolute;bottom:-2px;left:-2px;width:55px;height:55px;border-bottom:2px solid rgba(232,200,122,.7);border-left:2px solid rgba(232,200,122,.7);}
+
+/* CONTENIDO CENTRAL */
+.content{
   position:relative;
   z-index:10;
-  padding:40px 60px;
-  border:1px solid rgba(232,200,122,.3);
-  border-radius:8px;
-  background:rgba(255,255,255,.03);
-  backdrop-filter:blur(4px);
-  width:900px;
+  color:#f7f0ff;
 }
 
-/* esquinas doradas */
-.card::before{content:'';position:absolute;top:-2px;left:-2px;width:50px;height:50px;border-top:2px solid #e8c87a;border-left:2px solid #e8c87a;opacity:.8;}
-.card::after{content:'';position:absolute;bottom:-2px;right:-2px;width:50px;height:50px;border-bottom:2px solid #e8c87a;border-right:2px solid #e8c87a;opacity:.8;}
-
 .eyebrow{
-  font-family:'Georgia',serif;
-  font-size:14px;
-  letter-spacing:7px;
+  font-family:'Marcellus',serif;
+  font-size:13px;
+  letter-spacing:8px;
   text-transform:uppercase;
   color:#e8c87a;
-  opacity:.8;
-  margin-bottom:10px;
+  opacity:.75;
+  margin-bottom:12px;
 }
 
 .gold-line{
-  width:160px;height:1px;
+  width:180px;height:1px;
   background:linear-gradient(90deg,transparent,#e8c87a,transparent);
-  margin:16px auto;
+  margin:0 auto 20px;
 }
 
-.numero{
-  font-size:160px;
-  line-height:1;
+.titulo{
+  font-family:'Pinyon Script',cursive;
+  font-size:170px;
+  line-height:.95;
   background:linear-gradient(135deg,#e8c87a,#f5dfa0,#e8c87a);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  filter:drop-shadow(0 0 30px rgba(232,200,122,.5));
-  font-family:'Georgia',serif;
-  font-style:italic;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  filter:drop-shadow(0 0 40px rgba(232,200,122,.55));
 }
 
 .nombre{
-  font-size:96px;
-  color:#d4c3f7;
+  font-family:'Pinyon Script',cursive;
+  font-size:110px;
   line-height:1;
-  font-family:'Georgia',serif;
-  font-style:italic;
-  text-shadow:0 0 40px rgba(180,150,230,.7), 0 0 80px rgba(180,150,230,.3);
+  color:#d4c3f7;
+  text-shadow:0 0 50px rgba(180,150,230,.8), 0 0 100px rgba(180,150,230,.3);
+  margin-top:-10px;
 }
 
-.sub{
-  font-size:16px;
-  letter-spacing:5px;
-  color:rgba(247,240,255,.6);
-  text-transform:uppercase;
-  margin-top:8px;
+.gold-line2{
+  width:150px;height:1px;
+  background:linear-gradient(90deg,transparent,#e8c87a,transparent);
+  margin:18px auto 20px;
 }
 
-.fecha{
-  font-size:22px;
+.btn{
+  display:inline-block;
+  font-family:'Marcellus',serif;
+  padding:14px 38px;
+  font-size:15px;
+  letter-spacing:4px;
+  border:1px solid #e8c87a;
+  border-radius:40px;
   color:#e8c87a;
-  letter-spacing:3px;
+  background:rgba(232,200,122,.06);
+  box-shadow:0 0 30px rgba(232,200,122,.25), inset 0 0 20px rgba(232,200,122,.04);
+}
+
+.btn span{font-size:18px;margin-left:6px;}
+
+/* línea divisoria fina abajo del botón */
+.bottom-note{
   margin-top:18px;
-}
-
-/* mariposas decorativas SVG */
-.butterfly{position:absolute;}
-
-/* destellos */
-.sparkle{
-  position:absolute;
-  color:#e8c87a;
-  font-size:20px;
-  opacity:.6;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;
+  font-style:italic;
+  letter-spacing:3px;
+  color:rgba(212,195,247,.5);
 }
 </style>
 </head>
 <body>
 
-<!-- estrellas generadas con JS -->
 <div class="stars" id="stars"></div>
 
-<!-- mariposas decorativas -->
-<svg class="butterfly" style="top:60px;left:80px;opacity:.7;" width="80" height="80" viewBox="0 0 100 100">
-  <path d="M50 50 C20 15,0 35,38 55 C5 68,22 88,50 62 C78 88,95 68,62 55 C100 35,80 15,50 50" fill="#9b7bd3" opacity=".8"/>
-  <ellipse cx="50" cy="53" rx="4" ry="12" fill="#3d1870"/>
-</svg>
-<svg class="butterfly" style="top:80px;right:100px;opacity:.65;transform:scaleX(-1);" width="70" height="70" viewBox="0 0 100 100">
-  <path d="M50 50 C20 15,0 35,38 55 C5 68,22 88,50 62 C78 88,95 68,62 55 C100 35,80 15,50 50" fill="#f2b8d0" opacity=".85"/>
-  <ellipse cx="50" cy="53" rx="4" ry="12" fill="#7a2840"/>
-</svg>
-<svg class="butterfly" style="bottom:80px;left:120px;opacity:.6;" width="60" height="60" viewBox="0 0 100 100">
-  <path d="M50 50 C20 15,0 35,38 55 C5 68,22 88,50 62 C78 88,95 68,62 55 C100 35,80 15,50 50" fill="#e8c87a" opacity=".9"/>
-  <ellipse cx="50" cy="53" rx="4" ry="12" fill="#5a2800"/>
-</svg>
-<svg class="butterfly" style="bottom:100px;right:90px;opacity:.65;transform:scaleX(-1);" width="65" height="65" viewBox="0 0 100 100">
-  <path d="M50 50 C20 15,0 35,38 55 C5 68,22 88,50 62 C78 88,95 68,62 55 C100 35,80 15,50 50" fill="#c070d8" opacity=".8"/>
-  <ellipse cx="50" cy="53" rx="4" ry="12" fill="#500870"/>
+<!-- marco decorativo -->
+<div class="border-frame">
+  <div class="corner-tr"></div>
+  <div class="corner-bl"></div>
+</div>
+
+<!-- destellos dispersos -->
+<span class="sparkle" style="top:90px;left:220px;">✦</span>
+<span class="sparkle" style="top:140px;right:230px;font-size:12px;">✦</span>
+<span class="sparkle" style="bottom:110px;left:250px;font-size:11px;">✦</span>
+<span class="sparkle" style="bottom:150px;right:210px;font-size:14px;">✦</span>
+<span class="sparkle" style="top:300px;left:75px;font-size:10px;opacity:.4;">✦</span>
+<span class="sparkle" style="top:270px;right:80px;font-size:10px;opacity:.4;">✦</span>
+<span class="sparkle" style="top:190px;left:450px;font-size:9px;opacity:.35;">✦</span>
+<span class="sparkle" style="bottom:200px;right:420px;font-size:9px;opacity:.35;">✦</span>
+
+<!-- mariposa superior izquierda -->
+<svg class="butterfly" style="top:70px;left:100px;width:90px;height:90px;" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="b1a" cx="35%" cy="40%"><stop offset="0%" stop-color="#cbb8f5"/><stop offset="100%" stop-color="#9b7bd3"/></radialGradient>
+    <radialGradient id="b1b" cx="35%" cy="60%"><stop offset="0%" stop-color="#cbb8f5"/><stop offset="100%" stop-color="#9b7bd3bb"/></radialGradient>
+  </defs>
+  <!-- ala superior izq -->
+  <path d="M50 50 C35 20,8 28,15 48 C8 62,28 72,50 58" fill="url(#b1a)"/>
+  <!-- ala inferior izq -->
+  <path d="M50 58 C30 65,15 78,25 88 C35 96,48 85,50 70" fill="url(#b1b)"/>
+  <!-- ala superior der -->
+  <path d="M50 50 C65 20,92 28,85 48 C92 62,72 72,50 58" fill="url(#b1a)"/>
+  <!-- ala inferior der -->
+  <path d="M50 58 C70 65,85 78,75 88 C65 96,52 85,50 70" fill="url(#b1b)"/>
+  <!-- cuerpo -->
+  <ellipse cx="50" cy="60" rx="3" ry="12" fill="#3d1870"/>
+  <!-- antenas -->
+  <path d="M48 48 C44 38,38 32,35 26" stroke="#3d1870" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M52 48 C56 38,62 32,65 26" stroke="#3d1870" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <circle cx="35" cy="26" r="2.5" fill="#f5dfa0"/>
+  <circle cx="65" cy="26" r="2.5" fill="#f5dfa0"/>
+  <!-- manchita -->
+  <circle cx="30" cy="46" r="3" fill="#f5dfa0" opacity=".6"/>
+  <circle cx="70" cy="46" r="3" fill="#f5dfa0" opacity=".6"/>
 </svg>
 
-<!-- destellos -->
-<span class="sparkle" style="top:120px;left:300px;">✦</span>
-<span class="sparkle" style="top:200px;right:280px;font-size:14px;">✦</span>
-<span class="sparkle" style="bottom:140px;left:260px;font-size:12px;">✦</span>
-<span class="sparkle" style="bottom:180px;right:250px;">✦</span>
-<span class="sparkle" style="top:300px;left:55px;font-size:10px;">✦</span>
-<span class="sparkle" style="top:280px;right:60px;font-size:10px;">✦</span>
+<!-- mariposa superior derecha -->
+<svg class="butterfly" style="top:85px;right:110px;width:75px;height:75px;transform:scaleX(-1);" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="b2a" cx="35%" cy="40%"><stop offset="0%" stop-color="#fde0ee"/><stop offset="100%" stop-color="#f2b8d0"/></radialGradient>
+  </defs>
+  <path d="M50 50 C35 20,8 28,15 48 C8 62,28 72,50 58" fill="url(#b2a)"/>
+  <path d="M50 58 C30 65,15 78,25 88 C35 96,48 85,50 70" fill="#f2b8d0bb"/>
+  <path d="M50 50 C65 20,92 28,85 48 C92 62,72 72,50 58" fill="url(#b2a)"/>
+  <path d="M50 58 C70 65,85 78,75 88 C65 96,52 85,50 70" fill="#f2b8d0bb"/>
+  <ellipse cx="50" cy="60" rx="3" ry="12" fill="#7a2840"/>
+  <path d="M48 48 C44 38,38 32,35 26" stroke="#7a2840" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M52 48 C56 38,62 32,65 26" stroke="#7a2840" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <circle cx="35" cy="26" r="2.5" fill="#e8c87a"/>
+  <circle cx="65" cy="26" r="2.5" fill="#e8c87a"/>
+  <circle cx="30" cy="46" r="3" fill="#e8c87a" opacity=".6"/>
+  <circle cx="70" cy="46" r="3" fill="#e8c87a" opacity=".6"/>
+</svg>
 
-<div class="card">
+<!-- mariposa inferior izquierda -->
+<svg class="butterfly" style="bottom:85px;left:130px;width:65px;height:65px;opacity:.5;" viewBox="0 0 100 100">
+  <path d="M50 50 C35 20,8 28,15 48 C8 62,28 72,50 58" fill="#e8c87a"/>
+  <path d="M50 58 C30 65,15 78,25 88 C35 96,48 85,50 70" fill="#e8c87aaa"/>
+  <path d="M50 50 C65 20,92 28,85 48 C92 62,72 72,50 58" fill="#e8c87a"/>
+  <path d="M50 58 C70 65,85 78,75 88 C65 96,52 85,50 70" fill="#e8c87aaa"/>
+  <ellipse cx="50" cy="60" rx="3" ry="12" fill="#5a2800"/>
+  <path d="M48 48 C44 38,38 32,35 26" stroke="#5a2800" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M52 48 C56 38,62 32,65 26" stroke="#5a2800" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <circle cx="35" cy="26" r="2.5" fill="#ffffff"/>
+  <circle cx="65" cy="26" r="2.5" fill="#ffffff"/>
+</svg>
+
+<!-- mariposa inferior derecha -->
+<svg class="butterfly" style="bottom:100px;right:120px;width:72px;height:72px;transform:scaleX(-1);opacity:.5;" viewBox="0 0 100 100">
+  <path d="M50 50 C35 20,8 28,15 48 C8 62,28 72,50 58" fill="#c070d8"/>
+  <path d="M50 58 C30 65,15 78,25 88 C35 96,48 85,50 70" fill="#c070d8aa"/>
+  <path d="M50 50 C65 20,92 28,85 48 C92 62,72 72,50 58" fill="#c070d8"/>
+  <path d="M50 58 C70 65,85 78,75 88 C65 96,52 85,50 70" fill="#c070d8aa"/>
+  <ellipse cx="50" cy="60" rx="3" ry="12" fill="#500870"/>
+  <path d="M48 48 C44 38,38 32,35 26" stroke="#500870" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M52 48 C56 38,62 32,65 26" stroke="#500870" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <circle cx="35" cy="26" r="2.5" fill="#f8e8a0"/>
+  <circle cx="65" cy="26" r="2.5" fill="#f8e8a0"/>
+</svg>
+
+<!-- mariposa media izquierda pequeña -->
+<svg class="butterfly" style="top:50%;left:55px;transform:translateY(-50%);width:50px;height:50px;opacity:.4;" viewBox="0 0 100 100">
+  <path d="M50 50 C35 20,8 28,15 48 C8 62,28 72,50 58" fill="#68c890"/>
+  <path d="M50 58 C30 65,15 78,25 88 C35 96,48 85,50 70" fill="#68c890aa"/>
+  <path d="M50 50 C65 20,92 28,85 48 C92 62,72 72,50 58" fill="#68c890"/>
+  <path d="M50 58 C70 65,85 78,75 88 C65 96,52 85,50 70" fill="#68c890aa"/>
+  <ellipse cx="50" cy="60" rx="3" ry="12" fill="#206040"/>
+</svg>
+
+<!-- mariposa media derecha pequeña -->
+<svg class="butterfly" style="top:50%;right:60px;transform:translateY(-50%) scaleX(-1);width:50px;height:50px;opacity:.4;" viewBox="0 0 100 100">
+  <path d="M50 50 C35 20,8 28,15 48 C8 62,28 72,50 58" fill="#78a8e8"/>
+  <path d="M50 58 C30 65,15 78,25 88 C35 96,48 85,50 70" fill="#78a8e8aa"/>
+  <path d="M50 50 C65 20,92 28,85 48 C92 62,72 72,50 58" fill="#78a8e8"/>
+  <path d="M50 58 C70 65,85 78,75 88 C65 96,52 85,50 70" fill="#78a8e8aa"/>
+  <ellipse cx="50" cy="60" rx="3" ry="12" fill="#1030a0"/>
+</svg>
+
+<!-- CONTENIDO PRINCIPAL -->
+<div class="content">
   <p class="eyebrow">Con alegría y amor</p>
   <div class="gold-line"></div>
-  <div class="numero">15</div>
+  <div class="titulo">XV Años</div>
   <div class="nombre">Faty</div>
-  <div class="gold-line" style="margin-top:14px;"></div>
-  <p class="sub">Quinceañera · 18 de Abril 2026</p>
-  <p class="fecha">✦ Parroquia de Santa María · Amealco, Qro ✦</p>
+  <div class="gold-line2"></div>
+  <div class="btn">Abrir invitación <span>✨</span></div>
+  <p class="bottom-note">18 · Abril · 2026 · Amealco, Querétaro</p>
 </div>
 
 <script>
 const c=document.getElementById('stars');
-for(let i=0;i<80;i++){
-  const s=document.createElement('div');s.className='star';
-  s.style.cssText=`width:${Math.random()*2.5+.5}px;height:${Math.random()*2.5+.5}px;top:${Math.random()*100}%;left:${Math.random()*100}%;animation-delay:${Math.random()*3}s;animation-duration:${2+Math.random()*2}s;`;
+for(let i=0;i<90;i++){
+  const s=document.createElement('div');
+  s.className='star';
+  const size=Math.random()*2.5+.5;
+  s.style.cssText=`width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;animation-delay:${Math.random()*3}s;animation-duration:${1.5+Math.random()*2.5}s;`;
   c.appendChild(s);
 }
 </script>
