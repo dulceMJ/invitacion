@@ -5,18 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>XV Años – Faty</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Pinyon+Script&family=Marcellus&display=swap" rel="stylesheet">
-
 <meta property="og:title" content="Mis XV Años - Faty 💜">
 <meta property="og:description" content="Te invito a celebrar mis XV años ✨ · 18 de Abril 2026 · Amealco, Querétaro">
-<meta property="og:image" content="https://invitacion-faty.vercel.app/preview.jpg">
-<meta property="og:url" content="https://invitacion-faty.vercel.app/">
+<meta property="og:image" content="https://dulcemj.github.io/dulceMJ/invitacion/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://dulcemj.github.io/dulceMJ/invitacion/">
 <meta property="og:type" content="website">
-
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mis XV Años - Faty 💜">
 <meta name="twitter:description" content="Te invito a celebrar mis XV años ✨ · 18 de Abril 2026 · Amealco, Querétaro">
-<meta name="twitter:image" content="https://invitacion-faty.vercel.app/preview.jpg">
-  
+<meta name="twitter:image" content="https://dulcemj.github.io/dulceMJ/invitacion/preview.jpg">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{--gold:#e8c87a;--gold2:#f5dfa0;--lila:#b89fdc;--lila2:#d4c3f7;--dark:#1a0f2e;--rose:#f0c8d8;}
@@ -100,9 +99,9 @@ canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-
 .corner-bl{bottom:-2px;left:-2px;border-width:0 0 2px 2px;}
 @keyframes shimmer{0%{background-position:200% center;}100%{background-position:-200% center;}}
 @keyframes pulse-glow{0%,100%{text-shadow:0 0 30px rgba(180,150,230,.4);}50%{text-shadow:0 0 60px rgba(180,150,230,.9),0 0 100px rgba(180,150,230,.3);}}
-.reveal{opacity:0;transform:translateY(40px);transition:opacity 1s ease,transform 1s ease;}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 0.4s ease,transform 0.4s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
-.gold-line{width:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:24px auto;transition:width 1.5s ease;}
+.gold-line{width:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:24px auto;transition:width 0.6s ease;}
 .gold-line.visible{width:clamp(120px,50vw,200px);}
 .eyebrow{font-family:'Marcellus',serif;font-size:clamp(10px,2.5vw,12px);letter-spacing:clamp(3px,1.5vw,5px);text-transform:uppercase;color:var(--gold);opacity:.8;}
 .numero{font-family:'Pinyon Script',cursive;font-size:clamp(90px,22vw,140px);line-height:1;background:linear-gradient(135deg,var(--gold),var(--gold2),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 30px rgba(232,200,122,.4));animation:shimmer 4s linear infinite;background-size:200% 100%;}
@@ -198,20 +197,20 @@ canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-
     <div class="corner-bl"></div>
     <p class="eyebrow reveal">Con alegría y amor</p>
     <div class="gold-line"></div>
-    <div class="reveal" style="transition-delay:.1s"><div class="numero">15</div><span class="numero-sub">años</span></div>
-    <div class="nombre reveal" style="transition-delay:.5s">Faty</div>
-    <div class="gold-line" style="transition-delay:.5s"></div>
-    <p class="invite-text reveal" style="transition-delay:.7s">Tenemos el honor de invitar a usted<br>y su apreciable familia a la celebración<br>de nuestros queridos quince años</p>
-    <div class="pattern-divider reveal" style="transition-delay:1s"><span class="pattern-icon">✦ ❧ ✦</span></div>
-    <div class="reveal" style="transition-delay:1.1s"><div class="fecha-box"><p class="fecha-dia">Sábado</p><p class="fecha-num">18 · Abril · 2026</p><p class="fecha-hora">⏱ 4:00 pm · Misa de acción de gracias</p></div></div>
-    <div class="reveal" style="transition-delay:1.3s;margin-top:18px;"><p class="lugar-text">✦ Parroquia de Santa María ✦</p><p style="font-size:14px;color:rgba(247,240,255,.5);letter-spacing:2px;">Amealco, Querétaro</p></div>
-    <div class="mapa-wrap reveal" style="transition-delay:1.5s;margin-top:30px;"><iframe src="https://www.google.com/maps?q=Parroquia+de+Santa+Mar%C3%ADa+Amealco+Qro&output=embed" width="100%" height="260" style="border:0;display:block;" loading="lazy"></iframe></div>
-    <div class="reveal" style="transition-delay:1s;margin-top:30px;"><p class="eyebrow" style="margin-bottom:14px;">Faltan</p><div class="countdown"><div class="cd-item"><span class="cd-num" id="cd-d">00</span><span class="cd-label">días</span></div><div class="cd-sep">:</div><div class="cd-item"><span class="cd-num" id="cd-h">00</span><span class="cd-label">horas</span></div><div class="cd-sep">:</div><div class="cd-item"><span class="cd-num" id="cd-m">00</span><span class="cd-label">min</span></div><div class="cd-sep">:</div><div class="cd-item"><span class="cd-num" id="cd-s">00</span><span class="cd-label">seg</span></div></div></div>
-    <div class="pattern-divider reveal" style="transition-delay:2s"><span class="pattern-icon">✦ ❧ ✦</span></div>
-    <div class="reveal" style="transition-delay:2.2s;position:relative;"><div class="vestido-wrap"><div class="ring-orbit"></div><div class="ring-orbit2"></div><img src="vestido.png" alt="Vestido de quinceañera" onerror="this.style.display='none'"></div></div>
-    <div class="reveal" style="transition-delay:2.3s"><div class="roles"><div class="role-block"><p class="role-title">Padres</p><p class="role-name">Bernardina Juan<br>Francisco Miguel</p></div><div style="width:1px;background:rgba(232,200,122,.2);"></div><div class="role-block"><p class="role-title">Padrinos</p><p class="role-name">Agustín Mondragón<br>María Guadalupe Sánchez</p></div></div></div>
-    <div class="pattern-divider reveal" style="transition-delay:2.5s"><span class="pattern-icon">✦ ❧ ✦</span></div>
-    <div class="reveal" style="transition-delay:1s"><p class="cierre">Acompáñanos en la fiesta</p><p class="invite-text" style="margin-top:12px;">Casa de la Familia Miguel Juan</p><p class="hora-cierre">La recepción es a partir de las 6 pm</p></div>
+    <div class="reveal" style="transition-delay:.05s"><div class="numero">15</div><span class="numero-sub">años</span></div>
+    <div class="nombre reveal" style="transition-delay:.15s">Faty</div>
+    <div class="gold-line" style="transition-delay:.2s"></div>
+    <p class="invite-text reveal" style="transition-delay:.25s">Tenemos el honor de invitar a usted<br>y su apreciable familia a la celebración<br>de nuestros queridos quince años</p>
+    <div class="pattern-divider reveal" style="transition-delay:.3s"><span class="pattern-icon">✦ ❧ ✦</span></div>
+    <div class="reveal" style="transition-delay:.35s"><div class="fecha-box"><p class="fecha-dia">Sábado</p><p class="fecha-num">18 · Abril · 2026</p><p class="fecha-hora">⏱ 4:00 pm · Misa de acción de gracias</p></div></div>
+    <div class="reveal" style="transition-delay:.4s;margin-top:18px;"><p class="lugar-text">✦ Parroquia de Santa María ✦</p><p style="font-size:14px;color:rgba(247,240,255,.5);letter-spacing:2px;">Amealco, Querétaro</p></div>
+    <div class="mapa-wrap reveal" style="transition-delay:.45s;margin-top:30px;"><iframe src="https://www.google.com/maps?q=Parroquia+de+Santa+Mar%C3%ADa+Amealco+Qro&output=embed" width="100%" height="260" style="border:0;display:block;" loading="lazy"></iframe></div>
+    <div class="reveal" style="transition-delay:.5s;margin-top:30px;"><p class="eyebrow" style="margin-bottom:14px;">Faltan</p><div class="countdown"><div class="cd-item"><span class="cd-num" id="cd-d">00</span><span class="cd-label">días</span></div><div class="cd-sep">:</div><div class="cd-item"><span class="cd-num" id="cd-h">00</span><span class="cd-label">horas</span></div><div class="cd-sep">:</div><div class="cd-item"><span class="cd-num" id="cd-m">00</span><span class="cd-label">min</span></div><div class="cd-sep">:</div><div class="cd-item"><span class="cd-num" id="cd-s">00</span><span class="cd-label">seg</span></div></div></div>
+    <div class="pattern-divider reveal" style="transition-delay:2.2s"><span class="pattern-icon">✦ ❧ ✦</span></div>
+    <div class="reveal" style="transition-delay:2.4s;position:relative;"><div class="vestido-wrap"><div class="ring-orbit"></div><div class="ring-orbit2"></div><img src="vestido.png" alt="Vestido de quinceañera" onerror="this.style.display='none'"></div></div>
+    <div class="reveal" style="transition-delay:2.6s"><div class="roles"><div class="role-block"><p class="role-title">Padres</p><p class="role-name">Bernardina Juan<br>Francisco Miguel</p></div><div style="width:1px;background:rgba(232,200,122,.2);"></div><div class="role-block"><p class="role-title">Padrinos</p><p class="role-name">Agustín Mondragón<br>María Guadalupe Sánchez</p></div></div></div>
+    <div class="pattern-divider reveal" style="transition-delay:2.8s"><span class="pattern-icon">✦ ❧ ✦</span></div>
+    <div class="reveal" style="transition-delay:3s"><p class="cierre">Acompáñanos en la fiesta</p><p class="invite-text" style="margin-top:12px;">Casa de la Familia Miguel Juan</p><p class="hora-cierre">A partir de las 6 pm</p></div>
   </div>
 </div>
 
@@ -254,5 +253,3 @@ function abrirInvitacion(){const intro=document.getElementById('introScreen');in
 </script>
 </body>
 </html>
-
-
