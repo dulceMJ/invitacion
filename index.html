@@ -5,17 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>XV Años – Faty</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Pinyon+Script&family=Marcellus&display=swap" rel="stylesheet">
+
 <meta property="og:title" content="Mis XV Años - Faty 💜">
 <meta property="og:description" content="Te invito a celebrar mis XV años ✨ · 18 de Abril 2026 · Amealco, Querétaro">
-<meta property="og:image" content="https://dulcemj.github.io/dulceMJ/invitacion/preview.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:url" content="https://dulcemj.github.io/dulceMJ/invitacion/">
+<meta property="og:image" content="https://invitacion-faty.vercel.app/preview.jpg">
+<meta property="og:url" content="https://invitacion-faty.vercel.app/">
 <meta property="og:type" content="website">
+
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mis XV Años - Faty 💜">
 <meta name="twitter:description" content="Te invito a celebrar mis XV años ✨ · 18 de Abril 2026 · Amealco, Querétaro">
-<meta name="twitter:image" content="https://dulcemj.github.io/dulceMJ/invitacion/preview.jpg">
+<meta name="twitter:image" content="https://invitacion-faty.vercel.app/preview.jpg">
+  
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{--gold:#e8c87a;--gold2:#f5dfa0;--lila:#b89fdc;--lila2:#d4c3f7;--dark:#1a0f2e;--rose:#f0c8d8;}
@@ -53,30 +54,7 @@ canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-
 @keyframes btn-ring-spin{to{transform:rotate(360deg);}}
 @keyframes orbit-star{0%,100%{opacity:.5;transform:translateX(-50%) scale(1);}50%{opacity:1;transform:translateX(-50%) scale(1.5);}}
 @keyframes btn-attention{0%,80%,100%{transform:translateY(0) scale(1);}83%{transform:translateY(-5px) scale(1.05);}87%{transform:translateY(-2px) scale(1.02);}91%{transform:translateY(-5px) scale(1.05);}}
-.intro-btn{
-  font-family:'Marcellus',serif;
-  position:relative;
-  padding:clamp(15px,4vw,19px) clamp(36px,8vw,56px);
-  font-size:clamp(13px,3.5vw,15px);
-  letter-spacing:clamp(2px,1vw,4px);
-  border:none;
-  background:linear-gradient(135deg,rgba(50,25,80,.9) 0%,rgba(70,30,110,.9) 50%,rgba(50,25,80,.9) 100%);
-  color:var(--gold);
-  cursor:pointer;
-  border-radius:50px;
-  transition:all .4s cubic-bezier(.23,1,.32,1);
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  min-height:58px;
-  -webkit-tap-highlight-color:transparent;
-  touch-action:manipulation;
-  outline:1.5px solid rgba(232,200,122,.6);
-  outline-offset:0;
-  box-shadow:0 0 35px rgba(232,200,122,.3),0 0 70px rgba(180,140,230,.15),inset 0 1px 0 rgba(255,255,255,.12),inset 0 -1px 0 rgba(0,0,0,.25);
-  overflow:hidden;
-  white-space:nowrap;
-}
+.intro-btn{font-family:'Marcellus',serif;position:relative;padding:clamp(15px,4vw,19px) clamp(36px,8vw,56px);font-size:clamp(13px,3.5vw,15px);letter-spacing:clamp(2px,1vw,4px);border:none;background:linear-gradient(135deg,rgba(50,25,80,.9) 0%,rgba(70,30,110,.9) 50%,rgba(50,25,80,.9) 100%);color:var(--gold);cursor:pointer;border-radius:50px;transition:all .4s cubic-bezier(.23,1,.32,1);display:inline-flex;align-items:center;gap:10px;min-height:58px;-webkit-tap-highlight-color:transparent;touch-action:manipulation;outline:1.5px solid rgba(232,200,122,.6);outline-offset:0;box-shadow:0 0 35px rgba(232,200,122,.3),0 0 70px rgba(180,140,230,.15),inset 0 1px 0 rgba(255,255,255,.12),inset 0 -1px 0 rgba(0,0,0,.25);overflow:hidden;white-space:nowrap;}
 .intro-btn::before{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);animation:btn-shimmer 3s ease-in-out infinite;pointer-events:none;}
 @keyframes btn-shimmer{0%{left:-100%;}55%,100%{left:160%;}}
 .btn-icon{font-size:clamp(15px,3.5vw,18px);animation:btn-pulse-star 2s ease-in-out infinite;display:inline-block;}
@@ -99,10 +77,17 @@ canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-
 .corner-bl{bottom:-2px;left:-2px;border-width:0 0 2px 2px;}
 @keyframes shimmer{0%{background-position:200% center;}100%{background-position:-200% center;}}
 @keyframes pulse-glow{0%,100%{text-shadow:0 0 30px rgba(180,150,230,.4);}50%{text-shadow:0 0 60px rgba(180,150,230,.9),0 0 100px rgba(180,150,230,.3);}}
-.reveal{opacity:0;transform:translateY(40px);transition:opacity 0.4s ease,transform 0.4s ease;}
+
+/* ── TIEMPOS RÁPIDOS ── */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity 0.25s ease,transform 0.25s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
-.gold-line{width:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:24px auto;transition:width 0.6s ease;}
+.gold-line{width:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:24px auto;transition:width 0.4s ease;}
 .gold-line.visible{width:clamp(120px,50vw,200px);}
+
+/* ── EFECTO ESCRITURA ── */
+.typewriter-cursor{display:inline-block;width:2px;height:.85em;background:var(--gold);vertical-align:middle;margin-left:2px;animation:cur-blink .7s step-end infinite;}
+@keyframes cur-blink{0%,100%{opacity:1;}50%{opacity:0;}}
+
 .eyebrow{font-family:'Marcellus',serif;font-size:clamp(10px,2.5vw,12px);letter-spacing:clamp(3px,1.5vw,5px);text-transform:uppercase;color:var(--gold);opacity:.8;}
 .numero{font-family:'Pinyon Script',cursive;font-size:clamp(90px,22vw,140px);line-height:1;background:linear-gradient(135deg,var(--gold),var(--gold2),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 30px rgba(232,200,122,.4));animation:shimmer 4s linear infinite;background-size:200% 100%;}
 .numero-sub{font-size:clamp(11px,2.5vw,13px);letter-spacing:clamp(4px,2vw,8px);text-transform:uppercase;color:var(--gold);margin-top:-10px;display:block;}
@@ -154,15 +139,10 @@ canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-
   <span class="isparkle" style="bottom:24%;right:17%;font-size:14px;">✦</span>
   <span class="isparkle hide-xs" style="top:46%;left:7%;font-size:9px;opacity:.3;">✦</span>
   <span class="isparkle hide-xs" style="top:42%;right:8%;font-size:9px;opacity:.3;">✦</span>
-  <!-- mariposa lila arriba izq -->
   <svg class="ibutterfly" style="top:7%;left:8%;width:clamp(50px,8vw,100px);" viewBox="0 0 100 100"><defs><radialGradient id="ig1a"><stop offset="0%" stop-color="#cbb8f5"/><stop offset="100%" stop-color="#9b7bd3"/></radialGradient></defs><path d="M50 50 C35 20,8 28,15 48 C8 62,28 72,50 58" fill="url(#ig1a)"/><path d="M50 58 C30 65,15 78,25 88 C35 96,48 85,50 70" fill="#9b7bd3bb"/><path d="M50 50 C65 20,92 28,85 48 C92 62,72 72,50 58" fill="url(#ig1a)"/><path d="M50 58 C70 65,85 78,75 88 C65 96,52 85,50 70" fill="#9b7bd3bb"/><ellipse cx="50" cy="60" rx="3" ry="13" fill="#3d1870"/><path d="M48 48 C44 36,38 30,34 24" stroke="#3d1870" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M52 48 C56 36,62 30,66 24" stroke="#3d1870" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="34" cy="24" r="2.8" fill="#f5dfa0"/><circle cx="66" cy="24" r="2.8" fill="#f5dfa0"/></svg>
-  <!-- mariposa rosa arriba der -->
   <svg class="ibutterfly" style="top:9%;right:9%;width:clamp(40px,7vw,82px);transform:scaleX(-1);" viewBox="0 0 100 100"><defs><radialGradient id="ig2a"><stop offset="0%" stop-color="#fde0ee"/><stop offset="100%" stop-color="#f2b8d0"/></radialGradient></defs><path d="M50 50 C35 20,8 28,15 48 C8 62,28 72,50 58" fill="url(#ig2a)"/><path d="M50 58 C30 65,15 78,25 88 C35 96,48 85,50 70" fill="#f2b8d0bb"/><path d="M50 50 C65 20,92 28,85 48 C92 62,72 72,50 58" fill="url(#ig2a)"/><path d="M50 58 C70 65,85 78,75 88 C65 96,52 85,50 70" fill="#f2b8d0bb"/><ellipse cx="50" cy="60" rx="3" ry="13" fill="#7a2840"/><path d="M48 48 C44 36,38 30,34 24" stroke="#7a2840" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M52 48 C56 36,62 30,66 24" stroke="#7a2840" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="34" cy="24" r="2.8" fill="#e8c87a"/><circle cx="66" cy="24" r="2.8" fill="#e8c87a"/></svg>
-  <!-- mariposa dorada abajo izq -->
   <svg class="ibutterfly hide-xs" style="bottom:9%;left:11%;width:clamp(36px,6vw,72px);opacity:.55;" viewBox="0 0 100 100"><path d="M50 50 C35 20,8 28,15 48 C8 62,28 72,50 58" fill="#e8c87a"/><path d="M50 58 C30 65,15 78,25 88 C35 96,48 85,50 70" fill="#e8c87aaa"/><path d="M50 50 C65 20,92 28,85 48 C92 62,72 72,50 58" fill="#e8c87a"/><path d="M50 58 C70 65,85 78,75 88 C65 96,52 85,50 70" fill="#e8c87aaa"/><ellipse cx="50" cy="60" rx="3" ry="13" fill="#5a2800"/><path d="M48 48 C44 36,38 30,34 24" stroke="#5a2800" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M52 48 C56 36,62 30,66 24" stroke="#5a2800" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="34" cy="24" r="2.8" fill="#fff"/><circle cx="66" cy="24" r="2.8" fill="#fff"/></svg>
-  <!-- mariposa violeta abajo der -->
   <svg class="ibutterfly hide-xs" style="bottom:11%;right:10%;width:clamp(36px,6vw,72px);transform:scaleX(-1);opacity:.55;" viewBox="0 0 100 100"><path d="M50 50 C35 20,8 28,15 48 C8 62,28 72,50 58" fill="#c070d8"/><path d="M50 58 C30 65,15 78,25 88 C35 96,48 85,50 70" fill="#c070d8aa"/><path d="M50 50 C65 20,92 28,85 48 C92 62,72 72,50 58" fill="#c070d8"/><path d="M50 58 C70 65,85 78,75 88 C65 96,52 85,50 70" fill="#c070d8aa"/><ellipse cx="50" cy="60" rx="3" ry="13" fill="#500870"/><path d="M48 48 C44 36,38 30,34 24" stroke="#500870" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M52 48 C56 36,62 30,66 24" stroke="#500870" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="34" cy="24" r="2.8" fill="#f8e8a0"/><circle cx="66" cy="24" r="2.8" fill="#f8e8a0"/></svg>
-  <!-- laterales -->
   <svg class="ibutterfly hide-xs" style="top:50%;left:4%;transform:translateY(-50%);width:clamp(28px,4.5vw,56px);opacity:.4;" viewBox="0 0 100 100"><path d="M50 50 C35 20,8 28,15 48 C8 62,28 72,50 58" fill="#68c890"/><path d="M50 58 C30 65,15 78,25 88 C35 96,48 85,50 70" fill="#68c890aa"/><path d="M50 50 C65 20,92 28,85 48 C92 62,72 72,50 58" fill="#68c890"/><path d="M50 58 C70 65,85 78,75 88 C65 96,52 85,50 70" fill="#68c890aa"/><ellipse cx="50" cy="60" rx="3" ry="13" fill="#206040"/></svg>
   <svg class="ibutterfly hide-xs" style="top:50%;right:4%;transform:translateY(-50%) scaleX(-1);width:clamp(28px,4.5vw,56px);opacity:.4;" viewBox="0 0 100 100"><path d="M50 50 C35 20,8 28,15 48 C8 62,28 72,50 58" fill="#78a8e8"/><path d="M50 58 C30 65,15 78,25 88 C35 96,48 85,50 70" fill="#78a8e8aa"/><path d="M50 50 C65 20,92 28,85 48 C92 62,72 72,50 58" fill="#78a8e8"/><path d="M50 58 C70 65,85 78,75 88 C65 96,52 85,50 70" fill="#78a8e8aa"/><ellipse cx="50" cy="60" rx="3" ry="13" fill="#1030a0"/></svg>
 
@@ -172,7 +152,6 @@ canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-
     <h1 class="intro-title">XV Años</h1>
     <div class="intro-name">Faty</div>
     <div class="intro-gold-line2"></div>
-    <!-- BOTÓN MEJORADO -->
     <div class="intro-btn-wrap">
       <div class="intro-btn-ring"></div>
       <span class="intro-btn-star1">✦</span>
@@ -198,19 +177,19 @@ canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-
     <p class="eyebrow reveal">Con alegría y amor</p>
     <div class="gold-line"></div>
     <div class="reveal" style="transition-delay:.05s"><div class="numero">15</div><span class="numero-sub">años</span></div>
-    <div class="nombre reveal" style="transition-delay:.15s">Faty</div>
-    <div class="gold-line" style="transition-delay:.2s"></div>
-    <p class="invite-text reveal" style="transition-delay:.25s">Tenemos el honor de invitar a usted<br>y su apreciable familia a la celebración<br>de nuestros queridos quince años</p>
-    <div class="pattern-divider reveal" style="transition-delay:.3s"><span class="pattern-icon">✦ ❧ ✦</span></div>
-    <div class="reveal" style="transition-delay:.35s"><div class="fecha-box"><p class="fecha-dia">Sábado</p><p class="fecha-num">18 · Abril · 2026</p><p class="fecha-hora">⏱ 4:00 pm · Misa de acción de gracias</p></div></div>
-    <div class="reveal" style="transition-delay:.4s;margin-top:18px;"><p class="lugar-text">✦ Parroquia de Santa María ✦</p><p style="font-size:14px;color:rgba(247,240,255,.5);letter-spacing:2px;">Amealco, Querétaro</p></div>
-    <div class="mapa-wrap reveal" style="transition-delay:.45s;margin-top:30px;"><iframe src="https://www.google.com/maps?q=Parroquia+de+Santa+Mar%C3%ADa+Amealco+Qro&output=embed" width="100%" height="260" style="border:0;display:block;" loading="lazy"></iframe></div>
-    <div class="reveal" style="transition-delay:.5s;margin-top:30px;"><p class="eyebrow" style="margin-bottom:14px;">Faltan</p><div class="countdown"><div class="cd-item"><span class="cd-num" id="cd-d">00</span><span class="cd-label">días</span></div><div class="cd-sep">:</div><div class="cd-item"><span class="cd-num" id="cd-h">00</span><span class="cd-label">horas</span></div><div class="cd-sep">:</div><div class="cd-item"><span class="cd-num" id="cd-m">00</span><span class="cd-label">min</span></div><div class="cd-sep">:</div><div class="cd-item"><span class="cd-num" id="cd-s">00</span><span class="cd-label">seg</span></div></div></div>
-    <div class="pattern-divider reveal" style="transition-delay:2.2s"><span class="pattern-icon">✦ ❧ ✦</span></div>
-    <div class="reveal" style="transition-delay:2.4s;position:relative;"><div class="vestido-wrap"><div class="ring-orbit"></div><div class="ring-orbit2"></div><img src="vestido.png" alt="Vestido de quinceañera" onerror="this.style.display='none'"></div></div>
-    <div class="reveal" style="transition-delay:2.6s"><div class="roles"><div class="role-block"><p class="role-title">Padres</p><p class="role-name">Bernardina Juan<br>Francisco Miguel</p></div><div style="width:1px;background:rgba(232,200,122,.2);"></div><div class="role-block"><p class="role-title">Padrinos</p><p class="role-name">Agustín Mondragón<br>María Guadalupe Sánchez</p></div></div></div>
-    <div class="pattern-divider reveal" style="transition-delay:2.8s"><span class="pattern-icon">✦ ❧ ✦</span></div>
-    <div class="reveal" style="transition-delay:3s"><p class="cierre">Acompáñanos en la fiesta</p><p class="invite-text" style="margin-top:12px;">Casa de la Familia Miguel Juan</p><p class="hora-cierre">A partir de las 6 pm</p></div>
+    <div class="nombre reveal" style="transition-delay:.1s">Faty</div>
+    <div class="gold-line" style="transition-delay:.1s"></div>
+    <p class="invite-text reveal" id="tw-invite" style="transition-delay:.15s">Tenemos el honor de invitar a usted<br>y su apreciable familia a la celebración<br>de nuestros queridos quince años</p>
+    <div class="pattern-divider reveal" style="transition-delay:.2s"><span class="pattern-icon">✦ ❧ ✦</span></div>
+    <div class="reveal" style="transition-delay:.25s"><div class="fecha-box"><p class="fecha-dia">Sábado</p><p class="fecha-num">18 · Abril · 2026</p><p class="fecha-hora">⏱ 4:00 pm · Misa de acción de gracias</p></div></div>
+    <div class="reveal" style="transition-delay:.3s;margin-top:18px;"><p class="lugar-text">✦ Parroquia de Santa María ✦</p><p style="font-size:14px;color:rgba(247,240,255,.5);letter-spacing:2px;">Amealco, Querétaro</p></div>
+    <div class="mapa-wrap reveal" style="transition-delay:.35s;margin-top:30px;"><iframe src="https://www.google.com/maps?q=Parroquia+de+Santa+Mar%C3%ADa+Amealco+Qro&output=embed" width="100%" height="260" style="border:0;display:block;" loading="lazy"></iframe></div>
+    <div class="reveal" style="transition-delay:.4s;margin-top:30px;"><p class="eyebrow" style="margin-bottom:14px;">Faltan</p><div class="countdown"><div class="cd-item"><span class="cd-num" id="cd-d">00</span><span class="cd-label">días</span></div><div class="cd-sep">:</div><div class="cd-item"><span class="cd-num" id="cd-h">00</span><span class="cd-label">horas</span></div><div class="cd-sep">:</div><div class="cd-item"><span class="cd-num" id="cd-m">00</span><span class="cd-label">min</span></div><div class="cd-sep">:</div><div class="cd-item"><span class="cd-num" id="cd-s">00</span><span class="cd-label">seg</span></div></div></div>
+    <div class="pattern-divider reveal" style="transition-delay:.45s"><span class="pattern-icon">✦ ❧ ✦</span></div>
+    <div class="reveal" style="transition-delay:.5s;position:relative;"><div class="vestido-wrap"><div class="ring-orbit"></div><div class="ring-orbit2"></div><img src="vestido.png" alt="Vestido de quinceañera" onerror="this.style.display='none'"></div></div>
+    <div class="reveal" style="transition-delay:.55s"><div class="roles"><div class="role-block"><p class="role-title">Padres</p><p class="role-name">Bernardina Juan<br>Francisco Miguel</p></div><div style="width:1px;background:rgba(232,200,122,.2);"></div><div class="role-block"><p class="role-title">Padrinos</p><p class="role-name">Agustín Mondragón<br>María Guadalupe Sánchez</p></div></div></div>
+    <div class="pattern-divider reveal" style="transition-delay:.6s"><span class="pattern-icon">✦ ❧ ✦</span></div>
+    <div class="reveal" style="transition-delay:.65s"><p class="cierre" id="tw-cierre">Acompáñanos en la fiesta</p><p class="invite-text" style="margin-top:12px;">Casa de la Familia Miguel Juan</p><p class="hora-cierre">La recepción es a partir de las 6 pm</p></div>
   </div>
 </div>
 
@@ -241,10 +220,68 @@ document.addEventListener('click',e=>{for(let i=0;i<16;i++)clickParticles.push({
 document.addEventListener('touchstart',e=>{const t=e.touches[0];for(let i=0;i<12;i++)clickParticles.push({x:t.clientX,y:t.clientY,vx:(Math.random()-.5)*5,vy:(Math.random()-1)*5,life:1,size:Math.random()*3+.5,color:COLORS[Math.floor(Math.random()*COLORS.length)]});},{passive:true});
 function animate(){ctx.clearRect(0,0,W,H);particles.forEach(p=>{p.update();p.draw();});butterflies.forEach(b=>{b.update();b.draw();});for(let i=clickParticles.length-1;i>=0;i--){const cp=clickParticles[i];cp.x+=cp.vx;cp.y+=cp.vy;cp.vy+=.15;cp.life-=.022;ctx.beginPath();ctx.arc(cp.x,cp.y,cp.size,0,Math.PI*2);ctx.fillStyle=cp.color+cp.life+')';ctx.fill();if(cp.life<=0)clickParticles.splice(i,1);}requestAnimationFrame(animate);}
 animate();
+
+/* ── REVEAL ── */
 const revealEls=document.querySelectorAll('.reveal,.gold-line');
-const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.15});
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.1});
 revealEls.forEach(el=>io.observe(el));
-setTimeout(()=>{revealEls.forEach(el=>{const r=el.getBoundingClientRect();if(r.top<window.innerHeight)el.classList.add('visible');});},100);
+setTimeout(()=>{revealEls.forEach(el=>{const r=el.getBoundingClientRect();if(r.top<window.innerHeight)el.classList.add('visible');});},50);
+
+/* ── EFECTO ESCRITURA ── */
+function typeLines(el, lines, speed){
+  el.innerHTML='';
+  const cur=document.createElement('span');
+  cur.className='typewriter-cursor';
+  el.appendChild(cur);
+  let li=0,ci=0;
+  function next(){
+    if(li>=lines.length){cur.remove();return;}
+    if(ci===0&&li>0) el.insertBefore(document.createElement('br'),cur);
+    if(ci<lines[li].length){
+      el.insertBefore(document.createTextNode(lines[li][ci++]),cur);
+      setTimeout(next,speed);
+    } else {li++;ci=0;setTimeout(next,speed*4);}
+  }
+  next();
+}
+
+function typeText(el, text, speed){
+  el.innerHTML='';
+  const cur=document.createElement('span');
+  cur.className='typewriter-cursor';
+  el.appendChild(cur);
+  let i=0;
+  function next(){
+    if(i<text.length){el.insertBefore(document.createTextNode(text[i++]),cur);setTimeout(next,speed);}
+    else cur.remove();
+  }
+  next();
+}
+
+/* Observer para disparar typewriter cuando el elemento es visible */
+const twDone = new Set();
+const twObs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting||twDone.has(e.target)) return;
+    twDone.add(e.target);
+    const id=e.target.id;
+    const delay=parseFloat(e.target.style.transitionDelay||0)*1000+200;
+    if(id==='tw-invite'){
+      setTimeout(()=>typeLines(e.target,[
+        'Tenemos el honor de invitar a usted',
+        'y su apreciable familia a la celebración',
+        'de nuestros queridos quince años'
+      ],30),delay);
+    }
+    if(id==='tw-cierre'){
+      setTimeout(()=>typeText(e.target,'Acompáñanos en la fiesta',45),delay);
+    }
+    twObs.unobserve(e.target);
+  });
+},{threshold:.2});
+document.querySelectorAll('#tw-invite,#tw-cierre').forEach(el=>twObs.observe(el));
+
+/* ── COUNTDOWN ── */
 function updateCountdown(){const diff=new Date('2026-04-18T16:00:00')-new Date();if(diff<=0){['cd-d','cd-h','cd-m','cd-s'].forEach(id=>document.getElementById(id).textContent='00');return;}document.getElementById('cd-d').textContent=String(Math.floor(diff/(1000*60*60*24))).padStart(2,'0');document.getElementById('cd-h').textContent=String(Math.floor((diff/(1000*60*60))%24)).padStart(2,'0');document.getElementById('cd-m').textContent=String(Math.floor((diff/(1000*60))%60)).padStart(2,'0');document.getElementById('cd-s').textContent=String(Math.floor((diff/1000)%60)).padStart(2,'0');}
 updateCountdown();setInterval(updateCountdown,1000);
 const musicBtn=document.getElementById('musicBtn');
