@@ -19,14 +19,43 @@
   
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-:root{--gold:#e8c87a;--gold2:#f5dfa0;--lila:#b89fdc;--lila2:#d4c3f7;--dark:#1a0f2e;--rose:#f0c8d8;}
+:root{
+  --gold:#F2E1AE;      /* Amarillo elegante */
+  --gold2:#F2E1AE;
+  --lila:#9475BF;      /* Lila principal */
+  --lila2:#B4A3D9;     /* Lila suave */
+  --dark:#9475BF;      /* Azul oscuro principal */
+  --rose:#657EBE;      /* Azul cielo suave */
+}
+/*:root{--gold:#e8c87a;--gold2:#f5dfa0;--lila:#b89fdc;--lila2:#d4c3f7;--dark:#1a0f2e;--rose:#f0c8d8;}*/
 html{scroll-behavior:smooth;}
-body{font-family:'Cormorant Garamond',serif;background:var(--dark);color:#f7f0ff;text-align:center;overflow-x:hidden;cursor:none;}
+
+body{
+  font-family:'Cormorant Garamond',serif;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,230,255,0.25), transparent 60%),
+    radial-gradient(circle at center, #bfa6f2 0%, #6a4ea3 40%, #1b0d33 100%);
+  color:#f7f0ff;
+  text-align:center;
+  overflow-x:hidden;
+  cursor:none;
+}
+.frame{
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.04) 0%,
+    rgba(180,150,230,0.06) 50%,
+    rgba(0,0,0,0.2) 100%
+  );
+  backdrop-filter: blur(2px);
+}
+
+/*body{font-family:'Cormorant Garamond',serif;background:var(--dark);color:#f7f0ff;text-align:center;overflow-x:hidden;cursor:none;}*/
 @media(pointer:coarse){body{cursor:auto;}.cursor,.cursor-trail{display:none;}}
 .cursor{position:fixed;width:12px;height:12px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);box-shadow:0 0 15px var(--gold);}
 .cursor-trail{position:fixed;width:6px;height:6px;background:var(--lila2);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);opacity:.6;}
 canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;}
-#introScreen{position:fixed;inset:0;background:radial-gradient(circle at center,#2a1a44 0%,#12081f 70%);display:flex;align-items:center;justify-content:center;z-index:9999;text-align:center;overflow:hidden;}
+#introScreen{position:fixed;inset:0;background:radial-gradient(circle at center,#2a1a44 0%,/*#12081f*/ #B4A3D9  70%);display:flex;align-items:center;justify-content:center;z-index:9999;text-align:center;overflow:hidden;}
 #introStars{position:absolute;inset:0;pointer-events:none;}
 .istar{position:absolute;background:white;border-radius:50%;animation:itwinkle 3s infinite ease-in-out;}
 @keyframes itwinkle{0%,100%{opacity:.12;}50%{opacity:.95;}}
@@ -63,7 +92,7 @@ canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-
 .intro-btn:hover{background:linear-gradient(135deg,rgba(80,40,120,.95) 0%,rgba(110,50,170,.95) 50%,rgba(80,40,120,.95) 100%);box-shadow:0 0 55px rgba(232,200,122,.7),0 0 90px rgba(180,140,230,.35),0 10px 35px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.18);transform:translateY(-4px) scale(1.05);outline-color:rgba(232,200,122,1);color:#fff;}
 .intro-btn:active{transform:translateY(0) scale(.97);box-shadow:0 0 20px rgba(232,200,122,.5),inset 0 3px 10px rgba(0,0,0,.35);}
 @media(prefers-reduced-motion:reduce){.intro-btn::before,.intro-btn-ring,.btn-icon,.intro-btn-star1,.intro-btn-star2,.intro-btn-wrap{animation:none;}}
-.intro-sub{margin-top:20px;font-family:'Cormorant Garamond',serif;font-size:clamp(11px,2.8vw,13px);font-style:italic;letter-spacing:clamp(1px,.8vw,3px);color:rgba(212,195,247,.45);}
+.intro-sub{margin-top:20px;font-family:'Cormorant Garamond',serif;font-size:clamp(11px,2.8vw,13px);font-style:italic;letter-spacing:clamp(1px,.8vw,3px);color:rgba(255, 255, 255, 0.973);}
 @keyframes fadeOutIntro{to{opacity:0;pointer-events:none;visibility:hidden;}}
 
 /* ── CONTENEDOR PRINCIPAL ── */
@@ -187,7 +216,7 @@ canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-
     <div class="reveal" style="transition-delay:.4s;margin-top:30px;"><p class="eyebrow" style="margin-bottom:14px;">Faltan</p><div class="countdown"><div class="cd-item"><span class="cd-num" id="cd-d">00</span><span class="cd-label">días</span></div><div class="cd-sep">:</div><div class="cd-item"><span class="cd-num" id="cd-h">00</span><span class="cd-label">horas</span></div><div class="cd-sep">:</div><div class="cd-item"><span class="cd-num" id="cd-m">00</span><span class="cd-label">min</span></div><div class="cd-sep">:</div><div class="cd-item"><span class="cd-num" id="cd-s">00</span><span class="cd-label">seg</span></div></div></div>
     <div class="pattern-divider reveal" style="transition-delay:.45s"><span class="pattern-icon">✦ ❧ ✦</span></div>
     <div class="reveal" style="transition-delay:.5s;position:relative;"><div class="vestido-wrap"><div class="ring-orbit"></div><div class="ring-orbit2"></div><img src="vestido.png" alt="Vestido de quinceañera" onerror="this.style.display='none'"></div></div>
-    <div class="reveal" style="transition-delay:.55s"><div class="roles"><div class="role-block"><p class="role-title">Padres</p><p class="role-name">Bernardina Juan<br>Francisco Miguel</p></div><div style="width:1px;background:rgba(232,200,122,.2);"></div><div class="role-block"><p class="role-title">Padrinos</p><p class="role-name">Agustín Mondragón<br>María Guadalupe Sánchez</p></div></div></div>
+    <div class="reveal" style="transition-delay:.55s"><div class="roles"><div class="role-block"><p class="role-title">Padres</p><p class="role-name">Bernardina Juan<br>Francisco Miguel</p></div><div style="width:1px;background:rgba(232,200,122,.2);"></div><div class="role-block"><p class="role-title">Padrinos</p><p class="role-name">María Guadalupe Sánchez<br>Agustín Mondragón</p></div></div></div>
     <div class="pattern-divider reveal" style="transition-delay:.6s"><span class="pattern-icon">✦ ❧ ✦</span></div>
     <div class="reveal" style="transition-delay:.65s"><p class="cierre" id="tw-cierre">Acompáñanos en la fiesta</p><p class="invite-text" style="margin-top:12px;">Casa de la Familia Miguel Juan</p><p class="hora-cierre">La recepción es a partir de las 6 pm</p></div>
   </div>
